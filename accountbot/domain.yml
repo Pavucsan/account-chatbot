@@ -1,0 +1,66 @@
+intents:
+  - intent
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - account_search_provide
+  - inform
+
+entities:
+  - definition
+  - utility
+  - sample
+
+slots:
+  definition:
+    type: text
+  utility:
+    type: text
+  sample: 
+    type: text
+  type_account:
+    type: unfeaturized
+  
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_account_search_provider
+- action_sample
+
+templates:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a Accounting assisten you can ask any questions about Accounting sections!, say how can I help you."
+
+  utter_account_search_provider:
+  - text: "I can {utility} you, I am an accounting assistent so, How can I {utility} you? "
+  - text: "{definition} is the recording of financial transactions along with storing, sorting, retrieving, summarizing, and presenting the results in various reports and analyses. {definition} is also a field of study and profession dedicated to carrying out those tasks."
+  
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

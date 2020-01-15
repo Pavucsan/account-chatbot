@@ -1,18 +1,26 @@
 ## intent:greet
+
 - hey
 - hello
 - hi
 - good morning
 - good evening
 - hey there
+- hello I am [pavucsan](name)
+- hello I am [Pavucsan](name)
+- I am [pavucsan](name)
+- I am [Pavucsan](name)
+
 
 ## intent:goodbye
+
 - bye
 - goodbye
 - see you around
 - see you later
 
 ## intent:affirm
+
 - yes
 - indeed
 - of course
@@ -20,6 +28,7 @@
 - correct
 
 ## intent:deny
+
 - no
 - never
 - I don't think so
@@ -28,6 +37,7 @@
 - not really
 
 ## intent:mood_great
+
 - perfect
 - very good
 - great
@@ -36,8 +46,10 @@
 - I am feeling very good
 - I am great
 - I'm good
+- fine
 
 ## intent:mood_unhappy
+
 - sad
 - very sad
 - unhappy
@@ -50,17 +62,72 @@
 - so sad
 
 ## intent:bot_challenge
+
 - are you a bot?
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
 
 ## intent:inform
+
 - [example](sample)
+- [pavucsan](name)
+- [raj](name)
+- [sir](nickname)
+- [machan](nickname)
+- [baby](nickname)
+
+## intent:ask_reply_fine
+- how are you
+- are you okay [baby](nickname)
 
 
+<!-- Account section -->
+## intent:account_help
 
-## intent:account_search_provide
-- how can you [help](utility)?
-- can you say about [accounting](definition)?
-- give some [example](sample) for accounting
+- help me
+- how can you help me
+
+## intent:account_ask_help
+
+- who are you
+
+## intent:account_content
+- what are the content in accounting section
+- accounting section content
+- content
+- what content you have
+- do you have account content
+- give your content
+- give your account content
+- say your content
+
+## intent:accounting_pinciples
+- what is the accounting principless
+- accounting principless
+
+## intent:what_are_the_types
+- what are the types in accounting
+- types of accounting
+
+## intent:what_bookkeeping
+- bookkeeping
+- what is bookkeeping
+- mean by bookkeeping
+
+## intent:what_account
+
+- can you say about accounting
+- accounting
+- Accounting
+- what mean by accounting
+- what is accounting
+
+## intent:accounting_courses
+- What are some of the accounting courses in a college accounting degree?
+- accounting courses 
+
+## intent:basic_cost_accounting
+- How can I get a basic understanding of cost accounting?
+- basic understanding of cost accounting
+- accounting cost

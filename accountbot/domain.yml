@@ -17,6 +17,8 @@ actions:
   - utter_accounting_courses
   - utter_basic_cost_accounting
   - utter_account_content
+  - utter_acknowledgement
+  - utter_your_need
 entities: 
   - definition
   - sample
@@ -37,6 +39,7 @@ intents:
   - account_help
   - question
   - ask_reply_fine
+  - your_need
 
   - account_content
   - accounting_principles
@@ -45,6 +48,8 @@ intents:
   - what_bookkeeping
   - accounting_courses
   - basic_cost_accounting
+
+  - acknowledgement
 session_config: 
   carry_over_slots_to_new_session: true
   session_expiration_time: 60
@@ -62,6 +67,12 @@ slots:
   utility: 
     type: text
 templates: 
+
+  utter_acknowledgement:
+    -
+      text: "Sorry I couldn'd answer for your question"
+    -
+      text: "Sorry!"
   
   utter_account_ask_help: 
     - 
@@ -84,10 +95,11 @@ templates:
       image: "https://www.accountingcoach.com/accounting-principles/outline"
       text: "Our Explanation of Accounting Principles provides you with clear and concise descriptions of the basic underlying guidelines of accounting. You will see how the accounting principles affect the balance sheet and income statement."
   utter_ask_reply_fine: 
-    - 
-      text: "I am so cool {nickname}"
     -
       text: "I am cool"
+    - 
+      text: "I am so cool {nickname}"
+    
   utter_cheer_up: 
     - 
       image: "https://i.imgur.com/nGF1K8f.jpg"
@@ -100,12 +112,13 @@ templates:
       text: "Good Bye, Catch You Later"
   utter_greet: 
     - 
-      text: "Hey! How are you?"
+      text: "Hi there!"
     - 
       text: "Hello {name}"
   utter_happy: 
     - 
       text: "Great, carry on!"
+  utter_your_need:
     - 
       text: "Tell me what you want?"
   utter_iamabot: 

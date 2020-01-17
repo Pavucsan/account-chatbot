@@ -19,6 +19,7 @@ actions:
   - utter_account_content
   - utter_acknowledgement
   - utter_your_need
+  - utter_noworries
 entities: 
   - definition
   - sample
@@ -40,6 +41,7 @@ intents:
   - question
   - ask_reply_fine
   - your_need
+  - thanks
 
   - account_content
   - accounting_principles
@@ -104,23 +106,29 @@ templates:
     - 
       image: "https://i.imgur.com/nGF1K8f.jpg"
       text: "Here is something to cheer you up:"
+
   utter_did_that_help: 
     - 
       text: "Did that help you?"
-  utter_goodbye: 
-    - 
-      text: "Good Bye, Catch You Later"
-  utter_greet: 
-    - 
-      text: "Hi there!"
-    - 
-      text: "Hello {name}"
+  utter_goodbye:
+  - text: "Talk to you later!"
+  - text: "Have a good day."
+  - text: "Until next time!"
+
+  utter_greet:
+  - text: "Hi. What are you looking for?"
+  - text: "Hey there! Please choose one of the accounting section:"
+
+  utter_noworries:
+  - text: "My pleasure."
+  - text: "You are welcome!"
+
   utter_happy: 
     - 
       text: "Great, carry on!"
   utter_your_need:
     - 
-      text: "Tell me what you want?"
+      text: "select one from this option what you want?"
   utter_iamabot: 
     - 
       text: "I am a Accounting assisten you can ask any questions about Accounting sections!, say how can I help you."
@@ -128,9 +136,11 @@ templates:
   utter_what_bookkeeping:
     - 
       text: "Our Explanation of Bookkeeping provides you with a rich understanding of the recording of transactions. It then discusses the additional steps necessary for preparing accurate financial statements. This is great for bookkeepers of all skill levels and for small business owners.more information click : \n\ \x20 https://www.accountingcoach.com/bookkeeping/outline"
+  
   utter_what_account: 
     - 
       text: "Accounting is the recording of financial transactions along with storing, sorting, retrieving, summarizing, and presenting the results in various reports and analyses. {definition} is also a field of study and profession dedicated to carrying out those tasks. further details just click : \n\ \x20 https://www.accountingcoach.com/accounting-basics/outline"
+ 
   utter_what_are_the_types: 
     - 
       text: " 1. Advising on accounting systems \n\

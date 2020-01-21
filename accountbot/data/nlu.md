@@ -6,12 +6,9 @@
 - good morning
 - good evening
 - hey there
-- hello I am [pavucsan](name)
-- hello I am [Pavucsan](name)
-- I am [pavucsan](name)
-- I am [Pavucsan](name)
 
 ## intent:thanks
+
 - Thanks
 - Thank you
 - Thank you so much
@@ -79,26 +76,23 @@
 
 ## intent:bot_challenge
 
-- are you a bot?
+- are you a bot
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+- who are you
+- are you
 
 ## intent:inform
 
 - [example](sample)
-- [pavucsan](name)
-- [raj](name)
-- [sir](nickname)
-- [machan](nickname)
-- [baby](nickname)
 
 ## intent:ask_reply_fine
-- how are you
-- are you okay [baby](nickname)
 
+- how are you
 
 <!-- Account section -->
+
 ## intent:account_help
 
 - help me
@@ -109,8 +103,10 @@
 - who are you
 
 ## intent:account_content
+
 - what are the content in accounting section
 - accounting section content
+- accounting section
 - content
 - what content you have
 - do you have account content
@@ -119,14 +115,17 @@
 - say your content
 
 ## intent:accounting_pinciples
+
 - what is the accounting principless
 - accounting principless
 
 ## intent:what_are_the_types
+
 - what are the types in accounting
 - types of accounting
 
 ## intent:what_bookkeeping
+
 - bookkeeping
 - what is bookkeeping
 - mean by bookkeeping
@@ -140,10 +139,16 @@
 - what is accounting
 
 ## intent:accounting_courses
+
 - What are some of the accounting courses in a college accounting degree?
-- accounting courses 
+- accounting courses
 
 ## intent:basic_cost_accounting
+
+- accounting cost
+- account cost
+- accounting courses fee
+- fee
+- cost
 - How can I get a basic understanding of cost accounting?
 - basic understanding of cost accounting
-- accounting cost

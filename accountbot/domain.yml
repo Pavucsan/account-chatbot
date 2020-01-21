@@ -1,173 +1,142 @@
---- 
-actions: 
-  - utter_greet
-  - utter_cheer_up
-  - utter_did_that_help
-  - utter_happy
-  - utter_goodbye
-  - utter_iamabot
-  - utter_what_account
-  - utter_account_ask_help
-  - action_sample
-  - utter_ask_reply_fine
-  - utter_account_help
-  - utter_accounting_principles
-  - utter_what_are_the_types
-  - utter_what_bookkeeping
-  - utter_accounting_courses
-  - utter_basic_cost_accounting
-  - utter_account_content
-  - utter_acknowledgement
-  - utter_your_need
-  - utter_noworries
-entities: 
-  - definition
-  - sample
-  - name
-  - nickname
-intents: 
-  - intent
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - what_account
-  - inform
-  - account_ask_help
-  - account_help
-  - question
-  - ask_reply_fine
-  - your_need
-  - thanks
-
-  - account_content
-  - accounting_principles
-  - what_are_the_types
-  - accounting_pinciples
-  - what_bookkeeping
-  - accounting_courses
-  - basic_cost_accounting
-
-  - acknowledgement
-session_config: 
+session_config:
+  session_expiration_time: 60.0
   carry_over_slots_to_new_session: true
-  session_expiration_time: 60
-slots: 
-  definition: 
+intents:
+- intent
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- what_account
+- inform
+- account_help
+- question
+- ask_reply_fine
+- your_need
+- thanks
+- account_content
+- accounting_principles
+- what_are_the_types
+- accounting_pinciples
+- what_bookkeeping
+- accounting_courses
+- basic_cost_accounting
+- acknowledgement
+- account_ask_help
+entities:
+- definition
+- sample
+- name
+- nickname
+slots:
+  definition:
     type: text
-  name: 
+  name:
     type: text
-  nickname: 
+  nickname:
     type: text
-  sample: 
+  sample:
     type: text
-  type_account: 
+  type_account:
     type: unfeaturized
-  utility: 
+  utility:
     type: text
-templates: 
-
+templates:
+  utter_more_help:
+  - text: more help look the accounting section content:)...
   utter_acknowledgement:
-    -
-      text: "Sorry I couldn'd answer for your question"
-    -
-      text: "Sorry!"
-  
-  utter_account_ask_help: 
-    - 
-      text: "I am a Accounting assisten helpbot ( further help you can call 'accounting section content')"
-  utter_account_help: 
-    - 
-      text: "I can help you in accounting section ( further help you can call 'accounting section content')"
-
-  utter_account_content: 
-    -
-      text: "These are the content available in accounting section that are following bellow,\n\ \x20
-      1. accounting\n\ \x20
-      2. types of accounting\n\ \x20
-      3. accounting courses \n\ \x20
-      4. accounting cost\n\ \x20
-      5. bookkeeping\n\ \x20
-      "
-  utter_accounting_principles: 
-    - 
-      image: "https://www.accountingcoach.com/accounting-principles/outline"
-      text: "Our Explanation of Accounting Principles provides you with clear and concise descriptions of the basic underlying guidelines of accounting. You will see how the accounting principles affect the balance sheet and income statement."
-  utter_ask_reply_fine: 
-    -
-      text: "I am cool"
-    - 
-      text: "I am so cool {nickname}"
-    
-  utter_cheer_up: 
-    - 
-      image: "https://i.imgur.com/nGF1K8f.jpg"
-      text: "Here is something to cheer you up:"
-
-  utter_did_that_help: 
-    - 
-      text: "Did that help you?"
+  - text: Sorry I couldn'd answer for your question
+  - text: Sorry!
+  utter_account_ask_help:
+  - text: I am a Accounting assisten helpbot ( further help you can call 'accounting
+      section content')
+  utter_account_help:
+  - text: I can help you in accounting section ( further help you can call 'accounting
+      section content')
+  utter_account_content:
+  - text: "These are the content available in accounting section that are following\
+      \ bellow,\n   1. accounting\n   2. types of accounting\n   3. accounting courses\
+      \ \n   4. accounting cost\n   5. bookkeeping\n   "
+  utter_accounting_principles:
+  - text: text
+  utter_ask_reply_fine:
+  - text: I am cool
+  - text: I am so cool {nickname}
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
   utter_goodbye:
-  - text: "Talk to you later!"
-  - text: "Have a good day."
-  - text: "Until next time!"
-
+  - text: Talk to you later!
+  - text: Have a good day.
+  - text: Until next time!
   utter_greet:
-  - text: "Hi. What are you looking for?"
-  - text: "Hey there! Please choose one of the accounting section:"
-
+  - text: Hi. What are you looking for?
+  - text: 'Hey there! Please choose one of the accounting section:'
   utter_noworries:
-  - text: "My pleasure."
-  - text: "You are welcome!"
-
-  utter_happy: 
-    - 
-      text: "Great, carry on!"
+  - text: My pleasure.
+  - text: You are welcome!
+  utter_happy:
+  - text: Great, carry on!
   utter_your_need:
-    - 
-      text: "select one from this option what you want?"
-  utter_iamabot: 
-    - 
-      text: "I am a Accounting assisten you can ask any questions about Accounting sections!, say how can I help you."
-   
+  - text: select one from this option what you want?
+  utter_iamabot:
+  - text: I am a Accounting assisten you can ask any questions about Accounting sections!,
+      say how can I help you.
   utter_what_bookkeeping:
-    - 
-      text: "Our Explanation of Bookkeeping provides you with a rich understanding of the recording of transactions. It then discusses the additional steps necessary for preparing accurate financial statements. This is great for bookkeepers of all skill levels and for small business owners.more information click : \n\ \x20 https://www.accountingcoach.com/bookkeeping/outline"
-  
-  utter_what_account: 
-    - 
-      text: "Accounting is the recording of financial transactions along with storing, sorting, retrieving, summarizing, and presenting the results in various reports and analyses. {definition} is also a field of study and profession dedicated to carrying out those tasks. further details just click : \n\ \x20 https://www.accountingcoach.com/accounting-basics/outline"
- 
-  utter_what_are_the_types: 
-    - 
-      text: " 1. Advising on accounting systems \n\
-          \x202. Income tax planning, advising, and reporting \n\
-          \x203. Auditing the financial statements of companies and \n\
-          \x204. other organizations 5. Providing general business advice 6. Financial planning for individuals "
-
+  - text: Our Explanation of Bookkeeping provides you with a rich understanding of
+      the recording of transactions. It then discusses the additional steps necessary
+      for preparing accurate financial statements. This is great for bookkeepers of
+      all skill levels and for small business owners.
+  utter_what_account:
+  - text: "Accounting \n============\n Accounting is the recording of financial transactions\
+      \ along with storing, sorting, retrieving, summarizing, and presenting the results\
+      \ in various reports and analyses. {definition} is also a field of study and\
+      \ profession dedicated to carrying out those tasks"
+  utter_what_are_the_types:
+  - text: " 1. Advising on accounting systems \n 2. Income tax planning, advising,\
+      \ and reporting \n 3. Auditing the financial statements of companies and \n\
+      \ 4. other organizations 5. Providing general business advice 6. Financial planning\
+      \ for individuals "
   utter_accounting_courses:
-    -
-      text: "1.fundamentals of financial accounting \n\
-          \x202.fundamentals of managerial accounting \n\
-          \x203.intermediate financial accounting and reporting \n\
-          \x204.advanced financial accounting and reporting \n\
-          \x205.cost/managerial accounting\n\
-          \x206.accounting systems\n\
-          \x207.auditing, attestation and assurance\n\
-          \x208.income tax for individuals\n\
-          \x209.income tax for corporations\n\
-          \x210.financial statement analysis\n\
-          \x2011.accounting theory and research\n\
-          \x2012.accounting internship\n\
-          \x20 more information click :\n\ \x20 https://www.accountingcoach.com/blog/courses-college-accounting-degree          
-          "
-
+  - text: "1.fundamentals of financial accounting \n 2.fundamentals of managerial\
+      \ accounting \n 3.intermediate financial accounting and reporting \n 4.advanced\
+      \ financial accounting and reporting \n 5.cost/managerial accounting\n 6.accounting\
+      \ systems\n 7.auditing, attestation and assurance\n 8.income tax for individuals\n\
+      \ 9.income tax for corporations\n!0.financial statement analysis\n 11.accounting\
+      \ theory and research\n 12.accounting internship\n"
   utter_basic_cost_accounting:
-    -
-      text: "To get a basic understanding of cost accounting I recommend reading the managerial accounting topics found in the second half of an introductory accounting textbook. Such a textbook is often 1,200+ pages in length since it covers both financial and managerial accounting. (A textbook containing only financial accounting topics is not helpful.) A person in the U.S. should be able to obtain a 5-year-old edition of a 1,200-page introductory accounting textbook from a reseller on Amazon.com for approximately $5. more information click :\n\ \x20 https://www.accountingcoach.com/blog/how-can-i-get-a-basic-understanding-of-cost-accounting"
- 
-  
-          
+  - text: To get a basic understanding of cost accounting I recommend reading the
+      managerial accounting topics found in the second half of an introductory accounting
+      textbook. Such a textbook is often 1,200+ pages in length since it covers both
+      financial and managerial accounting. (A textbook containing only financial accounting
+      topics is not helpful.) A person in the U.S. should be able to obtain a 5-year-old
+      edition of a 1,200-page introductory accounting textbook from a reseller on
+      Amazon.com for approximately $5.
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_what_account
+- utter_account_ask_help
+- action_sample
+- utter_ask_reply_fine
+- utter_account_help
+- utter_accounting_principles
+- utter_what_are_the_types
+- utter_what_bookkeeping
+- utter_accounting_courses
+- utter_basic_cost_accounting
+- utter_account_content
+- utter_acknowledgement
+- utter_your_need
+- utter_noworries
+- utter_more_help
+- ->
